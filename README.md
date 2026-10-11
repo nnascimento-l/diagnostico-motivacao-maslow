@@ -33,4 +33,4 @@ O sistema coleta nome, e-mail (opcional), setor (opcional) e as respostas, e ped
 
 Senha do admin com password_hash e limite de tentativas, publicação com HTTPS e comparação entre aplicações feitas em datas diferentes.
 
-Telas
+## Telas
