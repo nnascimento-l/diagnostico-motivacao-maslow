@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Diagnóstico Corporativo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="bar" id="progBar"></div>
+<header class="site"><div class="wrap hd"><a class="brand" href="#inicio"><svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true"><rect x="2" y="13" width="5" height="11" fill="currentColor"/><rect x="10" y="7" width="5" height="17" fill="currentColor"/><rect x="18" y="2" width="5" height="22" fill="var(--hl)"/></svg><span>Diagnóstico Corporativo</span></a><nav><a href="#como">Como funciona</a><a href="#questionario" class="nav-cta">Responder</a></nav></div></header>
+<main>
+<div id="formView">
+<section class="hero" id="inicio"><div class="wrap hero-in"><div><h1>O que motiva você no trabalho?</h1><p>Responda 30 perguntas distribuindo 3 pontos entre duas respostas possíveis. No final, você recebe um relatório individual com sua principal motivação no trabalho e o percentual de cada elemento, pronto para salvar em PDF.</p><a class="cta" href="#questionario">Começar agora</a></div>
+<svg class="hero-g" viewBox="0 0 360 250" aria-hidden="true"><g stroke="currentColor" stroke-opacity=".18"><line x1="10" x2="350" y1="30" y2="30"/><line x1="10" x2="350" y1="85" y2="85"/><line x1="10" x2="350" y1="140" y2="140"/><line x1="10" x2="350" y1="195" y2="195"/></g><line x1="10" x2="350" y1="230" y2="230" stroke="currentColor" stroke-width="2"/><rect x="22" y="140" width="46" height="90" fill="currentColor" opacity=".55"/><rect x="90" y="85" width="46" height="145" fill="currentColor" opacity=".7"/><rect x="158" y="115" width="46" height="115" fill="currentColor" opacity=".55"/><rect x="226" y="40" width="46" height="190" fill="var(--hl)"/><rect x="294" y="70" width="46" height="160" fill="currentColor"/></svg></div></section>
+<section class="how" id="como"><div class="wrap"><h2>Como funciona</h2><div class="steps"><div><b>1</b><p>Informe seu nome completo. E-mail e setor são opcionais.</p></div><div><b>2</b><p>Em cada pergunta, distribua 3 pontos entre as respostas A e B: quanto mais pontos, mais ela combina com você.</p></div><div><b>3</b><p>Veja a porcentagem de cada área, o gráfico e salve o relatório em PDF.</p></div></div></div></section>
+<section class="wrap qs" id="questionario">
+<div id="identPanel"><div class="ident"><h2>Seus dados</h2><div class="grid">
+<div class="full" id="nameWrap"><label class="f" for="nome">Nome completo *</label><input type="text" id="nome" autocomplete="name" placeholder="Ex.: Maria da Silva Souza"><div class="err">Informe seu nome completo para continuar.</div></div>
+<div><label class="f" for="email">E-mail <small>(opcional)</small></label><input type="email" id="email" autocomplete="email" placeholder="voce@empresa.com"></div>
+<div><label class="f" for="setor">Departamento / Setor <small>(opcional)</small></label><input type="text" id="setor" placeholder="Ex.: Financeiro"></div></div></div>
+<label class="chk"><input type="checkbox" id="consent"> Concordo que meu nome, setor, e-mail e minhas respostas sejam armazenados para fins deste diagnóstico.</label>
+<div class="msg" id="msg"></div>
+<button type="button" class="btn" id="btnStart">Começar o questionário</button></div>
+<div id="quizPanel" class="hidden"><div class="quiz">
+<div class="q-top"><h2 id="qNum"></h2><span class="badge">3 pontos</span></div>
+<p class="q-title" id="qTitle"></p>
+<p class="q-sub">Escolha de 0 a 3 pontos para uma das respostas: a outra recebe automaticamente o que falta para completar 3. Para trocar o lado que você preenche, use “Limpar escolha”.</p>
+<div class="ans"><div><h3>Resposta A</h3><p id="aText"></p><label for="aSel">Pontos para A</label><select id="aSel"></select></div>
+<div><h3>Resposta B</h3><p id="bText"></p><label for="bSel">Pontos para B</label><select id="bSel"></select></div></div>
+<div class="sum" id="sum" aria-live="polite"></div>
+<div class="nav"><button type="button" class="btn alt" id="btnPrev">Voltar</button><button type="button" class="btn alt hidden" id="btnClear">Limpar escolha</button><button type="button" class="btn" id="btnNext">Próxima pergunta</button></div>
+</div></div></section>
+</div>
+<div id="resView" class="hidden"><div class="wrap res">
+<h1>Resultado do diagnóstico</h1><div class="meta" id="meta"></div>
+<div class="scroll"><table><thead><tr><th>Elemento / Pilar</th><th class="n">Pontos</th><th class="n">Máximo</th><th class="n">Percentual</th></tr></thead><tbody id="tbody"></tbody><tfoot id="tfoot"></tfoot></table></div>
+<p class="note">Percentual = pontos obtidos ÷ (nº de questões do elemento × 3) × 100. Cada pergunta distribui 3 pontos entre dois elementos.</p>
+<div class="chartbox" id="chart"></div>
+<div class="actions noprint"><button class="btn" id="btnPrint">Imprimir / Baixar PDF</button><button class="btn alt" id="btnBack">Revisar respostas</button><button class="btn alt" id="btnNew">Novo questionário</button></div>
+<p class="note noprint" id="saveStatus"></p>
+<p class="note noprint">Para salvar em PDF, escolha “Salvar como PDF” como destino na janela de impressão.</p>
+</div></div>
+</main>
+<footer class="foot"><div class="wrap"><p>Projeto de curricularização desenvolvido como atividade acadêmica. As respostas são guardadas no banco de dados do projeto e usadas apenas para o diagnóstico.</p></div></footer>
+<script src="grafico.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
