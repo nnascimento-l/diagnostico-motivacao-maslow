@@ -4,8 +4,8 @@ Aplicação web de diagnóstico corporativo baseada na hierarquia de necessidade
 
 🔗 **Acesse o site:** diagnostico-motivacao-maslow.vercel.app
 
-**Faculdade / curso:** Faculdade de Tecnologia de São Bernardo do Campo (Fatec SBC) 
-**Integrantes:** Turma: [Informática para Negócios] – [2 semestre/2026], disciplina Gestão de Equipes
+- **Faculdade** Faculdade de Tecnologia de São Bernardo do Campo (Fatec SBC)
+- **Turma:** Informática para Negócios -  2 semestre/2026, disciplina Gestão de Equipes
 
 ## O que o sistema faz
 
