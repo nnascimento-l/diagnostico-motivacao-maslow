@@ -2,6 +2,11 @@
 
 Aplicação web de diagnóstico corporativo baseada na hierarquia de necessidades de Maslow, desenvolvida como atividade de curricularização da disciplina **Gestão de Equipes.**
 
+🔗 **Acesse o site:** diagnostico-motivacao-maslow.vercel.app
+
+**Faculdade / curso:** Faculdade de Tecnologia de São Bernardo do Campo (Fatec SBC) 
+**Integrantes:** Turma: [Informática para Negócios] – [2 semestre/2026], disciplina Gestão de Equipes
+
 ## O que o sistema faz
 
 O colaborador responde 30 perguntas. Em cada uma há duas respostas possíveis (A e B) e ele distribui 3 pontos entre elas (3 e 0, 2 e 1, 1 e 2 ou 0 e 3); ao escolher os pontos de um lado, o outro é preenchido automaticamente. Cada resposta está ligada a um dos cinco elementos: Fisiológicas, Segurança, Sociais, Auto-estima e Realização.
@@ -30,9 +35,7 @@ Na pasta principal ficam as páginas do visitante (index.html, style.css, script
 
 ## Privacidade (LGPD)
 
-O sistema coleta nome, e-mail (opcional), setor (opcional) e as respostas, e pede autorização do participante antes de começar. O acesso à área de administração deve ficar restrito a quem conduz o diagnóstico. O arquivo php/config.php (senhas) não é enviado ao repositório.
-
-Senha do admin com password_hash e limite de tentativas, publicação com HTTPS e comparação entre aplicações feitas em datas diferentes.
+O sistema coleta nome, e-mail (opcional), setor (obrigatório) e as respostas, e pede autorização do participante antes de começar. O acesso à área de administração deve ficar restrito a quem conduz o diagnóstico. O arquivo php/config.php (senhas) não é enviado ao repositório.
 
 ## Telas
 
